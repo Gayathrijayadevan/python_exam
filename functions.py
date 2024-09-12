@@ -15,13 +15,13 @@ def update_books() :
     f=0
     for i in books:
         if  i["book_name"]==name:
-            n_name=input("Enter the new  book name")
+            n_name=input("Enter the new  book name:")
             i.update({'book_name':n_name})
 
             au_name=input("enter the new author name:")
             i.update({'author_name':au_name})
 
-            price= int(input("enter the new place:"))
+            price= int(input("enter the new price:"))
             i.update({'b_price':price})
             f=1
 
@@ -41,15 +41,15 @@ def remove_book():
 
 def display_books():
     for i in books:
-        print("{:<6}{:<10}{:<10}{:<6}".format("book number","book name","author","price"))
-    print('_'*20)
+        print("{:<15}{:<20}{:<20}{:<10}".format("book number","book name","author","price"))
+    print('_'*50)
     for i in books:
-        print(("{:<6}{:<10}{:<10}{:<6}").formate(i['book_no'],i['book_name'],i['author_name'],i['b_price']))
+        print(("{:<15}{:<20}{:<20}{:<10}").format(i['book_no'],i['book_name'],i['author_name'],i['b_price']))
 
 
 def search_books():
     s_name=input("enter book name to search:")
     for i in books:
-        if s_name in i['name']:
+        if s_name in i[' book_name']:
                 print(i)
 

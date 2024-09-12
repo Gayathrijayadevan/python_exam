@@ -1,5 +1,5 @@
 from users import *
-from function import *
+from functions import *
 
 while True:
     print("\n Welcome To Library Management System")
@@ -22,7 +22,7 @@ while True:
         password = input("Enter Password: ")
         if login_user(username, password):
             print("Login successful!")
-
+        
             while True:
                 print("\n Welcome To  The Library Management System")
                 print("1.Add books")
@@ -32,22 +32,24 @@ while True:
                 print("5. search book")
                 print("6. Exit")
 
-            a=int(input("Select an option:")) 
-            if a==1:
-                add_books()
-            elif a==2:
-                update_books() 
-            elif a==3:
-                remove_book()
-            elif a==4:
-                display_books()
-            elif a==5:
-                search_books() 
-            elif a== 6:
-                break
-            else:
-                print("invalid option")  
-
+                a=int(input("Select an option:")) 
+                if a==1:
+                    add_books()
+                elif a==2:
+                    update_books() 
+                elif a==3:
+                    remove_book()
+                elif a==4:
+                    display_books()
+                elif a==5:
+                    search_books() 
+                elif a== 6:
+                    break
+                else:
+                    print("invalid option")  
+        else:
+            print("invalid user")
+            
     elif choice == 3:
         print("Thank you for visting library management system")
         break
